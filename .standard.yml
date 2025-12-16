@@ -1,0 +1,3 @@
+ruby_version: 3.4.0
+fix: true
+parallel: true
