@@ -3,8 +3,14 @@
 <% resource_title = strip_html(strip_newlines(title)) %>
 <title><% if resource_title != "Index" %><%= resource_title %> | <%= metadata.title %><% else %><%= metadata.title %>: <%= metadata.tagline %><% end %></title>
 
+<meta property="og:site_name" content="Sidekiq">
+<meta property="og:type" content="company">
+<meta property="og:title" content="Simple, efficient background jobs for Ruby">
+<meta property="og:url" content="//sidekiq.org">
+<meta property="og:image" content="//sidekiq.org/assets/sidekiq.png">
+<meta property="og:description" content="Sidekiq is a simple, efficient framework for background jobs in Ruby">
 <meta name="description" content="<%= metadata.description %>" />
-
+<link rel="me" href="https://ruby.social/@getajobmike">
 <link rel="stylesheet" href="<%= asset_path :css %>" />
 <script src="<%= asset_path :js %>" defer></script>
 <%= live_reload_dev_js %>
