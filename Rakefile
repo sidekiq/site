@@ -3,6 +3,8 @@ require "standard/rake"
 
 Bridgetown.load_tasks
 
+load "./tasks/wiki.rake"
+
 # Run rake without specifying any command to execute a deploy build by default.
 task default: :"standard:fix"
 
