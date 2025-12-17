@@ -29,3 +29,7 @@ group :development do
 end
 
 gem "standard", "~> 1.52"
+
+gem "bridgetown-sitemap", "~> 3.0"
+
+gem "bridgetown-feed", "~> 4.0"
