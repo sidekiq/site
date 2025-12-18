@@ -19,17 +19,14 @@ source "https://gem.coop"
 git_source(:github) { "https://github.com/#{it}.git" }
 git_source(:codeberg) { "https://codeberg.org/#{it}.git" }
 
-gem "bridgetown", "~> 2.0.5"
-
 # Uncomment to add file-based dynamic routing to your project:
 # gem "bridgetown-routes", "~> 2.0.5"
 
 group :development do
   gem "puma", "< 8"
+  gem "standard"
 end
 
-gem "standard", "~> 1.52"
-
-gem "bridgetown-sitemap", "~> 3.0"
-
+gem "bridgetown"
+# gem "bridgetown-sitemap", "~> 3.0"
 gem "bridgetown-feed", "~> 4.0"

@@ -22,8 +22,27 @@ Bridgetown.configure do |config|
   template_engine "erb"
 
   init :"bridgetown-feed"
-  init :"bridgetown-sitemap"
+  # init :"bridgetown-sitemap"
 
+  collections do
+    wiki do
+      output true
+      # Using a `:path.*`-style permalink is recommended to ensure links between
+      # Markdown files work as intended:
+      permalink "wiki/:path.*"
+    end
+  end
+
+  config.defaults << {
+    scope: {collection: :wiki},
+    values: {layout: :default}
+  }
+
+  init :external_sources do
+    contents do
+      wiki "src/_wiki"
+    end
+  end
   # Other options you might want to investigate:
 
   # See list of timezone values here:
