@@ -33,52 +33,10 @@ def ex(cmd, message: "Running command", cwd: ".")
   end
 end
 
-def clean_wiki_folders
-  if File.exist?(g("wiki_dest"))
-    Dir.glob("#{g("wiki_dest")}/*.md") do |page|
-      puts "removing #{g("wiki_dest")}"
-      rm_rf page
-    end
-  else
-    mkdir_p(g("wiki_dest"))
-  end
-end
-
-def copy_wiki_pages
-  # here we only glob page beginning by a letter
-  # no _footer.md or thing like this
-  Dir.glob("#{g("wiki_source")}/[A-Za-z]*.md") do |page|
-    file_name = File.basename(page).tr(" ", "-")
-    page_path = File.join(g("wiki_dest"), file_name)
-
-    # remove extension
-    name = file_name.sub(/.[^.]+\z/, "")
-    title = name.tr("-", " ")
-    content = File.read(page)
-
-    puts "Generating #{page_path}"
-
-    # write the new file with yaml front matter
-    File.open(page_path, "w") do |new_page|
-      new_page.puts "---"
-      new_page.puts "layout: page"
-      new_page.puts "title: #{title}"
-      new_page.puts "wikiPageName: #{name}"
-      new_page.puts "category: wiki"
-      new_page.puts "updated_at: #{Time.now.utc.iso8601}"
-      new_page.puts "---"
-      new_page.puts ""
-      new_page.puts content
-    end
-  end
-end
-
 namespace :wiki do
   desc "Synchronize GitHub wiki content to here"
   task :sync do |t|
     update_wiki_submodule
-    clean_wiki_folders
-    copy_wiki_pages
     puts "Wiki synchronisation success!"
   end
 
