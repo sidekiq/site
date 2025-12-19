@@ -35,12 +35,12 @@ Bridgetown.configure do |config|
 
   config.defaults << {
     scope: {collection: :wiki},
-    values: {layout: :default}
+    values: {layout: :wiki, template_engine: :liquid}
   }
 
   init :external_sources do
     contents do
-      wiki "src/_wiki"
+      wiki "wiki"
     end
   end
   # Other options you might want to investigate:
@@ -53,9 +53,9 @@ Bridgetown.configure do |config|
   # Add collection pagination features to your site. Documentation here:
   # https://www.bridgetownrb.com/docs/content/pagination
   #
-  # pagination do
-  #   enabled true
-  # end
+  pagination do
+    enabled true
+  end
 
   # Configure the permalink style for pages and posts. Custom collections can be
   # configured separately under the `collections` key. Documentation here:

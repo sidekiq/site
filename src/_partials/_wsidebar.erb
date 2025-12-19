@@ -1,0 +1,8 @@
+<ul>
+  <% collections.wiki.each do |wpage|
+    pru = page.relative_url
+    wru = wpage.relative_url
+  %>
+  <li><a role="link" href="<%= wpage.relative_url %>%"><%= wpage.data.title %></a></li>
+  <% end %>
+</ul>
