@@ -12,7 +12,7 @@ task default: :"standard:fix"
 # Standard set of tasks, which you can customize if you wish:
 #
 desc "Build the Bridgetown site for deployment"
-task deploy: [:clean, "wiki:submodule", "frontend:build"] do
+task deploy: [:clean, "wiki:sync", "frontend:build"] do
   Bridgetown::Commands::Build.start
 end
 
