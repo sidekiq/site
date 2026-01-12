@@ -11,7 +11,7 @@
     <%= render "header", metadata: site.metadata, title: data.title %>
 
     <main class="container">
-      <h1><%= data.title %></h1>
+      <h1><%= data.slug.tr("-", ' ') %></h1>
       <p class="small">Last synchronized at <%= Time.now.utc.iso8601 %></p>
       <div class="row">
         <div class="col-md-9">
@@ -19,12 +19,12 @@
           <div class="inline-block">
             <div class="col-md-6">
               <% if n = page.previous_doc %>
-                <a href="<%= n.relative_url %>">&larr; <%= n.data.title %></a>
+                <a href="<%= n.relative_url %>">&larr; <%= n.data.slug %></a>
               <% end %>
             </div>
             <div class="col-md-6">
               <% if n = page.next_doc %>
-                <a href="<%= n.relative_url %>"><%= n.data.title %> &rarr;</a>
+                <a href="<%= n.relative_url %>"><%= n.data.slug %> &rarr;</a>
               <% end %>
             </div>
           </div>

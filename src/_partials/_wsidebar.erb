@@ -4,7 +4,7 @@
     # TODO Bridgetown doesn't prune partials like _Footer
     next if wpage.basename_without_ext.starts_with?("_")
   %>
-  <li><a role="link" href="<%= wpage.relative_url %>"><%= wpage.data.title %></a></li>
+  <li><a role="link" href="<%= wpage.relative_url %>"><%= wpage.data.slug %></a></li>
   <% end %>
 </ul>
 
