@@ -6519,9 +6519,6 @@ footer small {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     color: #ccc
 }
-footer small a {
-    color: #ccc
-}
 footer small a:hover {
     text-decoration: underline
 }
