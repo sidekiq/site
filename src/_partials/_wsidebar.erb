@@ -1,8 +1,11 @@
 <ul>
   <% collections.wiki.each do |wpage|
-    pru = page.relative_url
     wru = wpage.relative_url
+    # TODO Bridgetown doesn't prune partials like _Footer
+    next if wpage.basename_without_ext.starts_with?("_")
   %>
   <li><a role="link" href="<%= wpage.relative_url %>"><%= wpage.data.title %></a></li>
   <% end %>
 </ul>
+
+<a href="//github.com/sidekiq/site">Source</a> <small>(PRs welcome!)</small>

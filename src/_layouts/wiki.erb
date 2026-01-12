@@ -16,13 +16,17 @@
       <div class="row">
         <div class="col-md-9">
           <%= yield %>
-          <div class="center-block">
-            <% if n = page.previous_doc %>
-              <a href="<%= n.relative_url %>">&larr;<%= n.data.title %></a>
-            <% end %>
-            <% if n = page.next_doc %>
-              <a href="<%= n.relative_url %>"><%= n.data.title %>&rarr;</a>
-            <% end %>
+          <div class="inline-block">
+            <div class="col-md-6">
+              <% if n = page.previous_doc %>
+                <a href="<%= n.relative_url %>">&larr; <%= n.data.title %></a>
+              <% end %>
+            </div>
+            <div class="col-md-6">
+              <% if n = page.next_doc %>
+                <a href="<%= n.relative_url %>"><%= n.data.title %> &rarr;</a>
+              <% end %>
+            </div>
           </div>
         </div>
         <div class="col-md-3">

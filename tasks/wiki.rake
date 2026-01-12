@@ -9,7 +9,7 @@ def g(key)
     deploy_remote: "origin",
     deploy_branch: "gh-pages",
     wiki_repository_url: "https://github.com/sidekiq/sidekiq.wiki.git",
-    wiki_source: "wiki",
+    wiki_source: "wiki"
   }[key.to_sym]
 end
 

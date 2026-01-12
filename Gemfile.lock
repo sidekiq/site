@@ -216,6 +216,3 @@ DEPENDENCIES
   bridgetown-feed (~> 4.0)
   puma (< 8)
   standard
-
-BUNDLED WITH
-   2.6.9

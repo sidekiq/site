@@ -32,6 +32,9 @@ Bridgetown.configure do |config|
       permalink "wiki/:path.*"
     end
   end
+  kramdown do
+    mark_highlighting false
+  end
 
   config.defaults << {
     scope: {collection: :wiki},
