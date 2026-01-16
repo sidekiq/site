@@ -22,7 +22,7 @@ Bridgetown.configure do |config|
   template_engine "erb"
 
   init :"bridgetown-feed"
-  # init :"bridgetown-sitemap"
+  init :"bridgetown-sitemap"
 
   collections do
     wiki do

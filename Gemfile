@@ -28,5 +28,5 @@ group :development do
 end
 
 gem "bridgetown"
-# gem "bridgetown-sitemap", "~> 3.0"
+gem "bridgetown-sitemap", "~> 3.0"
 gem "bridgetown-feed", "~> 4.0"
