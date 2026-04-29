@@ -120,6 +120,7 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button;
+    appearance: button;
     cursor: pointer
 }
 button[disabled],
@@ -145,11 +146,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
     -webkit-appearance: textfield;
+    appearance: textfield;
     box-sizing: content-box
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    appearance: none
 }
 fieldset {
     border: 1px solid #c0c0c0;
@@ -1802,7 +1805,8 @@ textarea.form-control {
     height: auto
 }
 input[type="search"] {
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    appearance: none
 }
 input[type="date"] {
     line-height: 36px
@@ -4513,7 +4517,8 @@ button.close {
     cursor: pointer;
     background: transparent;
     border: 0;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    appearance: none
 }
 .modal-open {
     overflow: hidden
@@ -5551,9 +5556,6 @@ h6 {
     text-align: center;
     width: 180px
 }
-.skq-cols {
-    margin-top: 3em
-}
 [class*="skq-col-"] {
     padding: 20px 30px;
     min-height: 600px
@@ -5595,90 +5597,6 @@ h6 {
 .skq-col-right h3,
 .skq-col-right a {
     color: #00558d
-}
-.skq-tabs {
-    text-align: center;
-    z-index: 10
-}
-.skq-tabs.tall-tabs {
-    height: 150px
-}
-.skq-tabs.tall-tabs .col-xs-4,
-.skq-tabs.tall-tabs a {
-    height: 150px;
-    font-size: 1.15em
-}
-.skq-tabs.tall-tabs h3 {
-    margin-top: 60px
-}
-.tabs-holder.fixed-mode {
-    height: 70px;
-    background-color: #999
-}
-.skq-tabs.fixed-mode {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    z-index: 1035
-}
-[class*="skq-tab"] {
-    position: relative;
-    overflow: hidden;
-    height: 70px
-}
-[class*="skq-tab"] h3 {
-    font-size: 1.4em
-}
-[class*="skq-tab"] img {
-    margin-top: -5px
-}
-[class*="skq-tab"] a {
-    z-index: 1;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 70px
-}
-.angle-tag {
-    position: absolute;
-    display: inline-block;
-    padding: .5em 2.4em .4em;
-    top: -2.3em;
-    right: -2.2em;
-    font-size: .8em;
-    color: #fff;
-    background-color: #b1003e;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg)
-}
-.tab-highlight {
-    box-shadow: inset 0 0 0 10 px rgba(255, 255, 255, 0.15)
-}
-.skq-tab-left {
-    background-color: #999
-}
-.skq-tab-center {
-    background-color: #222
-}
-.skq-tab-right {
-    background-color: #7e002c
-}
-.skq-tab-left:hover,
-.skq-tab-center:hover,
-.skq-tab-right:hover {
-    box-shadow: inset 0 0 0 10 px rgba(255, 255, 255, 0.15)
-}
-.skq-tab-left,
-.skq-tab-center,
-.skq-tab-right {
-    color: #fff
-}
-.product {
-    padding-top: 40px;
-    position: relative;
-    min-height: 580px
 }
 #products {
     width: 100%;
@@ -5794,7 +5712,6 @@ img.icon {
     margin: 0
 }
 .purchase .page-links a {
-    display: inline-block;
     float: left;
     padding: 20px 20px 20px 10px;
     font-size: 20px;
@@ -5913,49 +5830,6 @@ footer small a:hover {
         padding: 0;
         position: relative
     }
-    .col-sm-10.no-padding {
-        overflow-x: scroll;
-        overflow-y: hidden
-    }
-    .charts-wrapper {
-        width: 1050px
-    }
-    .charts-wrapper ul.product {
-        width: 170px
-    }
-    .charts-wrapper ul.col-ent {
-        width: 210px
-    }
-    .col-oss {
-        margin-left: 110px!important
-    }
-    .key-wrapper {
-        position: absolute;
-        display: block;
-        float: left;
-        z-index: 9;
-        width: 110px;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.9);
-        box-shadow: 1px 0 2px rgba(0, 0, 0, 0.15);
-        font-size: .7em
-    }
-    .key-wrapper ul.key li {
-        white-space: normal
-    }
-    .col-sm-4 {
-        width: 100%
-    }
-    .skq-copy-wrapper {
-        height: auto;
-        margin-top: 0
-    }
-    .row.skq-tabs,
-    #oss,
-    #pro,
-    #enterprise {
-        display: none
-    }
     .skq-subfooter a {
         margin: 1em 2em 0 2em
     }
@@ -5988,15 +5862,6 @@ footer small a:hover {
         margin-bottom: 20px;
         font-size: 1.4em
     }
-    [class*="skq-tab"] {
-        height: 55px
-    }
-    [class*="skq-tab"] .angle-tag {
-        font-size: .5em
-    }
-    [class*="skq-tab"] h3 {
-        font-size: .75em
-    }
     [class*="skq-col-"] {
         min-height: 0
     }
@@ -6006,9 +5871,6 @@ footer small a:hover {
     }
     .skq-support-copy {
         padding: 0 10px
-    }
-    .product {
-        height: auto!important
     }
 }
 
